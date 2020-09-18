@@ -1,0 +1,115 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: darkgray whitesmoke;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: whitesmoke;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgray ;
+  border: 3px solid whitesmoke;
+}
+
+html{
+    max-height: 100vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #262626;
+    font-family: Verdana;
+    max-height: 100vh;
+    background-color: whitesmoke;
+    font-size: .95em;
+}
+
+.wrapper{
+    max-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+header h1{
+    background-color: #212121;
+    color: #ecf0f1;
+    padding: 20px 15px;
+    font-size: 120%;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: left;
+}
+
+.container{
+    padding: 20px;
+    background-color: gainsboro;
+}
+
+.toc{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 5px 0 5px 0;
+}
+
+.toc-button{
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    color: #262626;
+    font-size: small;
+    border: solid;
+    border-width: thin;
+    padding: 5px 10px;
+}
+
+.toc-button:hover{
+    background-color: darkgray;
+}
+
+.toc-button:focus{
+    background-color: darkgray;
+}
+
+.toc-button.active{
+    background-color: darkgray;
+}
+
+.reader{
+    background-color: whitesmoke;
+    text-align: justify;
+    overflow-y: auto;
+}
+
+.article-content{
+    display: none;
+    height: 100%;
+}
+
+.article-content h6{
+    border-bottom: thin solid darkgray;
+    margin: 5px 0 20px 0;
+}
+
+.reader-content{
+    padding: 0 20px 0 20px;
+}
+
+.reader-content h6{
+    border-bottom: initial;
+    margin: initial;
+    margin-bottom: 10px;
+}
+
+.reader-content ol{
+    padding-inline-start: 20px;
+}

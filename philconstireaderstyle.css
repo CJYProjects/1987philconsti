@@ -93,7 +93,7 @@ header h1{
     height: 100%;
 }
 
-.article-content h6{
+.article-title{
     border-bottom: thin solid darkgray;
     margin: 5px 0 20px 0;
 }

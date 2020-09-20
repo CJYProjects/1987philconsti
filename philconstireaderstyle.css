@@ -54,32 +54,61 @@ header h1{
     background-color: gainsboro;
 }
 
-.toc{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 5px 2px;
+@media screen and (max-width: 600px){
+    .toc{
+        display: none;
+    }
+    
+    #toc-title{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #toc-text{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    .toc-button{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .toc{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 5px 2px;
+    }
+    
+    #toc-title{
+        display: none;
+    }
 }
 
 .toc-button{
-    border: none;
+    border: thin solid gainsboro;
+    border-width: thin;
     background-color: transparent;
     font-weight: bold;
     color: #262626;
-    border: solid;
-    border-width: thin;
     padding: 5px 10px;
 }
 
 .toc-button:hover{
-    background-color: darkgray;
+    border: thin solid;
 }
 
 .toc-button:focus{
-    background-color: darkgray;
+    border: thin solid;
 }
 
 .toc-button.active{
     background-color: darkgray;
+    border: thin solid;
+    border-radius: 5px;
 }
 
 .reader{

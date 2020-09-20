@@ -21,25 +21,25 @@
             <div class="container">
                 <button id="toc-title" onclick="showToc()"><i class="material-icons">toc</i><span id="toc-text">Table of Contents</span></button>
                 <div id="toc" class="toc collapsible">
-                    <button id="preamble-button" class="toc-button" onclick="showArticle('preamble')">PREAMBLE</button>
-                    <button id="article-1-button" class="toc-button" onclick="showArticle('article-1')">ARTICLE I</button>
-                    <button id="article-2-button" class="toc-button" onclick="showArticle('article-2')">ARTICLE II</button>
-                    <button id="article-3-button" class="toc-button" onclick="showArticle('article-3')">ARTICLE III</button>
-                    <button id="article-4-button" class="toc-button" onclick="showArticle('article-4')">ARTICLE IV</button>
-                    <button id="article-5-button" class="toc-button" onclick="showArticle('article-5')">ARTICLE V</button>
-                    <button id="article-6-button" class="toc-button" onclick="showArticle('article-6')">ARTICLE VI</button>
-                    <button id="article-7-button" class="toc-button" onclick="showArticle('article-7')">ARTICLE VII</button>
-                    <button id="article-8-button" class="toc-button" onclick="showArticle('article-8')">ARTICLE VIII</button>
-                    <button id="article-9-button" class="toc-button" onclick="showArticle('article-9')">ARTICLE IX</button>
-                    <button id="article-10-button" class="toc-button" onclick="showArticle('article-10')">ARTICLE X</button>
-                    <button id="article-11-button" class="toc-button" onclick="showArticle('article-11')">ARTICLE XI</button>
-                    <button id="article-12-button" class="toc-button" onclick="showArticle('article-12')">ARTICLE XII</button>
-                    <button id="article-13-button" class="toc-button" onclick="showArticle('article-13')">ARTICLE XIII</button>
-                    <button id="article-14-button" class="toc-button" onclick="showArticle('article-14')">ARTICLE XIV</button>
-                    <button id="article-15-button" class="toc-button" onclick="showArticle('article-15')">ARTICLE XV</button>
-                    <button id="article-16-button" class="toc-button" onclick="showArticle('article-16')">ARTICLE XVI</button>
-                    <button id="article-17-button" class="toc-button" onclick="showArticle('article-17')">ARTICLE XVII</button>
-                    <button id="article-18-button" class="toc-button" onclick="showArticle('article-18')">ARTICLE XVIII</button>
+                    <button id="preamble-button" class="toc-button" onclick="showArticle(this, 'preamble')">PREAMBLE</button>
+                    <button id="article-1-button" class="toc-button" onclick="showArticle(this, 'article-1')">ARTICLE I</button>
+                    <button id="article-2-button" class="toc-button" onclick="showArticle(this, 'article-2')">ARTICLE II</button>
+                    <button id="article-3-button" class="toc-button" onclick="showArticle(this, 'article-3')">ARTICLE III</button>
+                    <button id="article-4-button" class="toc-button" onclick="showArticle(this, 'article-4')">ARTICLE IV</button>
+                    <button id="article-5-button" class="toc-button" onclick="showArticle(this, 'article-5')">ARTICLE V</button>
+                    <button id="article-6-button" class="toc-button" onclick="showArticle(this, 'article-6')">ARTICLE VI</button>
+                    <button id="article-7-button" class="toc-button" onclick="showArticle(this, 'article-7')">ARTICLE VII</button>
+                    <button id="article-8-button" class="toc-button" onclick="showArticle(this, 'article-8')">ARTICLE VIII</button>
+                    <button id="article-9-button" class="toc-button" onclick="showArticle(this, 'article-9')">ARTICLE IX</button>
+                    <button id="article-10-button" class="toc-button" onclick="showArticle(this, 'article-10')">ARTICLE X</button>
+                    <button id="article-11-button" class="toc-button" onclick="showArticle(this, 'article-11')">ARTICLE XI</button>
+                    <button id="article-12-button" class="toc-button" onclick="showArticle(this, 'article-12')">ARTICLE XII</button>
+                    <button id="article-13-button" class="toc-button" onclick="showArticle(this, 'article-13')">ARTICLE XIII</button>
+                    <button id="article-14-button" class="toc-button" onclick="showArticle(this, 'article-14')">ARTICLE XIV</button>
+                    <button id="article-15-button" class="toc-button" onclick="showArticle(this, 'article-15')">ARTICLE XV</button>
+                    <button id="article-16-button" class="toc-button" onclick="showArticle(this, 'article-16')">ARTICLE XVI</button>
+                    <button id="article-17-button" class="toc-button" onclick="showArticle(this, 'article-17')">ARTICLE XVII</button>
+                    <button id="article-18-button" class="toc-button" onclick="showArticle(this, 'article-18')">ARTICLE XVIII</button>
                 </div>
             </div>
             
@@ -1638,7 +1638,7 @@
         </div>
         
         <script>
-            function showArticle(articleName){
+            function showArticle(tocButton, articleName){
                 var i, articleArray, buttonArray;
                 
                 articleArray = document.getElementsByClassName("article-content");
@@ -1654,8 +1654,9 @@
                 document.getElementById(articleName).scrollTop = 0;
                 document.getElementById(articleName).style.display = "block";
                 document.getElementById(articleName + "-button").classList.add("active");
-                
+
                 if(document.getElementById("toc").style.display == "block"){
+                    document.getElementById("toc-text").innerHTML = tocButton.innerHTML;
                     document.getElementById("toc").style.display = "none";
                 }
             }

@@ -63,12 +63,12 @@ header h1{
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
     }
     
     #toc-text{
         text-transform: uppercase;
         font-weight: bold;
+        flex: 1 1 auto;
     }
     
     .toc-button{

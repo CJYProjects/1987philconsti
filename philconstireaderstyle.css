@@ -129,6 +129,7 @@ header h1{
 
 .reader-content{
     padding: 0 20px 0 20px;
+    display: none;
 }
 
 h6{
@@ -137,4 +138,22 @@ h6{
 
 .reader-content ol{
     padding-inline-start: 20px;
+}
+
+.section-button{
+    display: flex;
+    width: 100%;
+    border: 3px solid whitesmoke;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    background-color: gainsboro;
+}
+
+.arrow{
+    transition: transform .25s;
+}
+
+.arrow.active{
+    transform: rotate(180deg);
 }

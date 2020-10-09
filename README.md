@@ -6,3 +6,6 @@ I've been looking around how websites presented the document and my short attent
 - Mobile and desktop friendly / Responsive layout
 - Per section collapsible view
 - Table of contents / Article buttons
+
+Click [here](https://cjyprojects.github.io/1987philconsti/) to view the demo site.
+Click [here](https://trello.com/b/3pn2W1Yt) to see what else is in store for this project.

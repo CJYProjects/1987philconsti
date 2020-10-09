@@ -15,8 +15,57 @@
     <body>
         <div class="wrapper">
             <header>
+                <button id="menu-button" onclick="showModal('menu')"><i class="material-icons">menu</i></button>
                 <h1 class="title">1987 Philippine Constitution</h1>
+                <div id="menu" class="sidebar">
+                    <button id="close-button" class="header-button" onclick="closeModal('menu')"><i class="material-icons">close</i></button>
+                    <button id="contact-button" class="header-button" onclick="showModal('contact-content')">CONTACT</button>
+                    <button id="support-button" class="header-button" onclick="showModal('support-content')">SUPPORT</button>
+                </div>
             </header>
+            
+            <div id="contact-content" class="modal">
+                <button id="close-button" class="header-button" onclick="closeModal('contact-content')"><i class="material-icons">close</i></button>
+                <p>Found a typo? Got a feedback or suggestion? Want to talk about a project? Feel free to contact me on any of the following:</p>
+                <div id="social-content" class="modal-box">
+                    <div id="facebook-icon" class="social-icon icon-box">
+                        <a href="https://www.facebook.com/CJYProjects-102054138321600/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 10h-2v2h2v6h3v-6h1.82l.18-2h-2v-.833c0-.478.096-.667.558-.667h1.442v-2.5h-2.404c-1.798 0-2.596.792-2.596 2.308v1.692z"/></svg></a>
+                    </div>
+                    <div id="twitter-icon" class="social-icon icon-box">
+                        <a href="https://twitter.com/CJYProjects">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z"/></svg></a>
+                    </div>
+                    <div id="email-icon" class="social-icon icon-box">
+                        <a href="mailto:cjyprojects@gmail.com">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.02c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 12.55l-5.992-4.57h11.983l-5.991 4.57zm0 1.288l-6-4.629v6.771h12v-6.771l-6 4.629z"/></svg></a>
+                    </div>
+                    <div id="github-icon" class="social-icon icon-box">
+                        <a href="https://github.com/CJYProjects">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 6c-3.313 0-6 2.686-6 6 0 2.651 1.719 4.9 4.104 5.693.3.056.396-.13.396-.289v-1.117c-1.669.363-2.017-.707-2.017-.707-.272-.693-.666-.878-.666-.878-.544-.373.041-.365.041-.365.603.042.92.619.92.619.535.917 1.403.652 1.746.499.054-.388.209-.652.381-.802-1.333-.152-2.733-.667-2.733-2.965 0-.655.234-1.19.618-1.61-.062-.153-.268-.764.058-1.59 0 0 .504-.161 1.65.615.479-.133.992-.199 1.502-.202.51.002 1.023.069 1.503.202 1.146-.776 1.648-.615 1.648-.615.327.826.121 1.437.06 1.588.385.42.617.955.617 1.61 0 2.305-1.404 2.812-2.74 2.96.216.186.412.551.412 1.111v1.646c0 .16.096.347.4.288 2.383-.793 4.1-3.041 4.1-5.691 0-3.314-2.687-6-6-6z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="support-content" class="modal">
+                <button id="close-button" class="header-button" onclick="closeModal('support-content')"><i class="material-icons">close</i></button>
+                <p>Thanks for using this site! Feel free to share this page to anyone who might need it.</p>
+                <div id="share-content" class="modal-box">
+                    
+                </div>
+                <p>You can also help me keep the project going by donating below. It will help me improve my equipment and add more features to the site.</p>
+                <div id="donate-content" class="modal-box">
+                    <div class="icon-box">
+                        <p>Reccuring donation:</p>
+                        <script src="https://liberapay.com/CJYProjects/widgets/button.js"></script>
+                    </div>
+                    <div class="icon-box">
+                        <p>One-time donation:</p>
+                        <a href='https://ko-fi.com/F1F429RS3' target='_blank'><img height='30' style='border:0px;height:30px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+                    </div>
+                </div>
+            </div>
             
             <div class="container">
                 <button id="toc-title" onclick="showOrHide('toc')"><i class="material-icons">toc</i><span id="toc-text">Table of Contents</span><i id="toc-arrow" class="material-icons arrow">expand_more</i></button>
@@ -1670,6 +1719,15 @@
                     document.getElementById(divName).style.display = "none";
                     document.getElementById(divName + "-arrow").classList.remove("active");
                 }
+            }
+            
+            function showModal(modalName){
+                document.getElementById("menu").style.width = "0";
+                document.getElementById(modalName).style.width = "100%";
+            }
+            
+            function closeModal(modalName){
+                document.getElementById(modalName).style.width = "0";
             }
             
             document.getElementById("preamble-button").click();

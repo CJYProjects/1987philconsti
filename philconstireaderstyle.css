@@ -39,14 +39,21 @@ body{
     
 }
 
-header h1{
+header{
     background-color: #212121;
     color: #ecf0f1;
-    padding: 20px 15px;
+    padding: 10px 15px;
+    margin: 0;
+    vertical-align: center;
+}
+
+header h1{
+    margin: 0;
     font-size: 120%;
     text-transform: uppercase;
-    margin: 0;
-    text-align: left;
+    display: inline-block;
+    float: left;
+    padding: 1px 10px;
 }
 
 .container{
@@ -54,7 +61,7 @@ header h1{
     background-color: gainsboro;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 649px){
     .toc{
         display: none;
     }
@@ -74,9 +81,14 @@ header h1{
     .toc-button{
         width: 100%;
     }
+    
+    header h1{
+        font-size: 80%;
+        padding: 5px 10px;
+    }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 650px){
     .toc{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -88,9 +100,112 @@ header h1{
     }
 }
 
+#menu-button{
+    float: left;
+    cursor: pointer;
+}
+
+.sidebar{
+    transition: 0.75s;
+}
+
+.modal{
+    color: #ecf0f1;
+}
+
+.modal p{
+    padding: 0px 20px;
+}
+
+.sidebar, .modal{
+    background-color: rgba(33,33,33,0.95);
+    height: 100%;
+    width: 0;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 15px;
+    overflow-x: hidden;
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.icon-box{
+    padding: 10px 25px;
+}
+
+.icon-box p{
+    margin-block-start: 0;
+}
+
+.social-icon{
+    fill: #ecf0f1;
+    zoom: 2.0;
+}
+
+.social-icon a:link, .social-icon a:visited{
+    fill: #ecf0f1;
+}
+
+@keyframes wiggle{
+    0% {transform: rotate(10deg);}
+    25% {transform: rotate(-10deg);}
+    50% {transform: rotate(10deg);}
+    75% {transform: rotate(-10deg);}
+    100% {transform: rotate(10deg);}
+}
+
+.social-icon svg:hover, .social-icon svg:focus{
+    animation-name: wiggle;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#menu-button{
+    background-color: transparent;
+    border: thin solid #212121;
+    border-right-color: gainsboro;
+    color: #ecf0f1;
+    padding: 0px 5px;
+}
+
+.header-button{
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #ecf0f1;
+    font-size: 110%;
+    display: block;
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.header-button:hover, .header-button:focus{
+    text-decoration: underline;
+    zoom: 1.2;
+}
+
+#close-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: initial;
+}
+
 .toc-button{
     border: thin solid gainsboro;
-    border-width: thin;
     background-color: transparent;
     font-weight: bold;
     color: #262626;
